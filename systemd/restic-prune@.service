@@ -1,0 +1,6 @@
+[Unit]
+Description=Restic prune task %I
+[Service]
+Type=oneshot
+ExecStart=restic prune
+EnvironmentFile=/etc/restic/restic-backup.%i.conf
